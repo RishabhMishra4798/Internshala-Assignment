@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class A{
+	static int n;
+	static boolean tf;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		sc.close();
+		A a1 = new A();
+		System.out.println(a1.isGoodNumber(n));
+		
+	}
+	
+	public boolean isGoodNumber(int N){
+		String s = Integer.toString(n);
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(i)=='7') {
+				tf = false;
+				System.out.println("(Contains 7)");
+				break;
+			}else if(n%7!=0){
+				tf = false;
+				System.out.println("(not divided by 7)");
+				break;
+			}else {
+				tf = true;
+			}
+		}
+	return tf;
+		}
+}
